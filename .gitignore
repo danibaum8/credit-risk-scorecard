@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# Model artifacts (binary — regenerate by running notebooks)
+model_artifacts.pkl
+
+# SQLite database (regenerate from german.data.txt via 01_data_loading.ipynb)
+data/creditrisk.db
