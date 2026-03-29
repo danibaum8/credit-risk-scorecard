@@ -11,8 +11,9 @@ st.set_page_config(
     layout="wide",
 )
 
-BLUE   = "#2176AE"
-ORANGE = "#D4622A"
+BLUE   = "#1B4F72"   # Option A — Navy
+ORANGE = "#E74C3C"   # Option A — Alert Red
+MID    = "#5D8AA8"   # mid-tone blue for moderate risk
 
 # ── Custom CSS ─────────────────────────────────────────────────────────────────
 st.markdown("""
@@ -21,9 +22,9 @@ st.markdown("""
     h1  { color: #111111; font-weight: 700; font-size: 1.8rem; }
     h3  { color: #333333; font-weight: 600; }
     .score-band { border-radius: 8px; padding: 1rem 1.4rem; margin-top: 0.5rem; }
-    .band-low   { background: #EAF2FB; border-left: 4px solid #2176AE; }
-    .band-mid   { background: #FDF3EC; border-left: 4px solid #E8A87C; }
-    .band-high  { background: #FCEAE3; border-left: 4px solid #D4622A; }
+    .band-low   { background: #EAF0F6; border-left: 4px solid #1B4F72; }
+    .band-mid   { background: #FDF3EC; border-left: 4px solid #5D8AA8; }
+    .band-high  { background: #FCEAE3; border-left: 4px solid #E74C3C; }
     .stSelectbox label, .stNumberInput label, .stSlider label { font-size: 0.85rem; }
 </style>
 """, unsafe_allow_html=True)
@@ -99,8 +100,8 @@ def make_gauge(score):
             "steps": [
                 {"range": [0,   400], "color": "#FCEAE3"},
                 {"range": [400, 500], "color": "#FDF3EC"},
-                {"range": [500, 700], "color": "#EAF2FB"},
-                {"range": [700, 1000],"color": "#D6EAF8"},
+                {"range": [500, 700], "color": "#EAF0F6"},
+                {"range": [700, 1000],"color": "#D6E8F2"},
             ],
             "threshold": {
                 "line": {"color": "#111111", "width": 2},
@@ -247,9 +248,9 @@ with right:
     st.markdown("**Score breakdown**")
     bands = {
         "700+":    ("Low Risk",           "0%",     BLUE),
-        "600-699": ("Moderate-Low Risk",  "10-14%", "#6AACE1"),
-        "500-599": ("Moderate Risk",      "9-10%",  "#E8A87C"),
-        "400-499": ("Moderate-High Risk", "40-70%", "#D4874A"),
+        "600-699": ("Moderate-Low Risk",  "10-14%", "#5D8AA8"),
+        "500-599": ("Moderate Risk",      "9-10%",  "#5D8AA8"),
+        "400-499": ("Moderate-High Risk", "40-70%", "#E74C3C"),
         "< 400":   ("High Risk",          ">70%",   ORANGE),
     }
     band_df = pd.DataFrame(
