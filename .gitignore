@@ -17,7 +17,7 @@ env/
 .DS_Store
 .AppleDouble
 
-# Model artifacts (binary — regenerate by running notebooks)
+# Model artifacts (binary - regenerate by running notebooks)
 model_artifacts.pkl
 
 # SQLite database (regenerate from german.data.txt via 01_data_loading.ipynb)
