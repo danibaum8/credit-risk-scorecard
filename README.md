@@ -1,15 +1,15 @@
 # Credit Risk Scorecard
 
-A production-inspired credit risk scoring model built with Python, demonstrating end-to-end data science in a regulated financial environment. The project takes raw applicant data through exploratory analysis, feature engineering, model selection, and SHAP explainability — producing a scorecard aligned with the standards expected in insurance, fintech, and banking.
+A credit risk scoring model built with Python, demonstrating end-to-end data science in a regulated financial environment. The project takes raw applicant data through exploratory analysis, feature engineering, model selection, and SHAP explainability, producing a scorecard aligned with the standards expected in insurance, fintech, and banking.
 
 ## Key Highlights
 
-- **Domain-aware feature engineering** using Weight of Evidence (WoE) encoding and Information Value (IV) — the industry standard in credit scoring
-- **Dual model approach** — Logistic Regression scorecard (champion) vs XGBoost (challenger)
-- **Regulated performance metrics** — Gini coefficient, KS statistic, AUC
-- **SHAP explainability** — global and individual-level explanations aligned with GDPR Article 22
-- **SQLite data layer** — raw data, feature store, and model-ready dataset stored and queried via SQL
-- **Model Card** — documents intended use, limitations, and ethical considerations
+- **Domain-aware feature engineering** using Weight of Evidence (WoE) encoding and Information Value (IV), the industry standard in credit scoring
+- **Dual model approach** - Logistic Regression scorecard (champion) vs XGBoost (challenger)
+- **Regulated performance metrics** - Gini coefficient, KS statistic, AUC
+- **SHAP explainability** - global and individual-level explanations aligned with GDPR Article 22
+- **SQLite data layer** - raw data, feature store, and model-ready dataset stored and queried via SQL 
+- **Model Card** - documents intended use, limitations, and ethical considerations
 
 ---
 
